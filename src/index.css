@@ -1,13 +1,231 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App{
+    background-color: #F4F2FF;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    height: 100%;
+    min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+    max-width: 80%;
+    margin-inline: auto;
+
+}
+
+.table-head{
+    font-weight: 700;
+    color: #6E6893;
+}
+
+.payment_status{
+display: flex;
+justify-content: space-between;
+border-bottom: 1px solid #C6C2DE;
+
+margin-top: 20px;
+}
+.payment_status .tab_item{
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0 10px 10px 10px;
+}
+
+.tab_item_border{
+    border-bottom: 2px solid #25213B;
+}
+
+.table{
+    margin-top: 20px;
+    background: #FFFFFF;
+    width: 100%;
+height: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);;
+}
+
+.pay_btn{
+    width: 99px;
+height: 39px;
+
+/* Primary */
+background: #6D5BD0;
+border-radius: 6px;
+color: white;
+}
+
+.filter_btn{
+    width: 88px;
+height: 40px;
+
+/* Backgrounds/Primary */
+background: #FFFFFF;
+
+/* Fonts/Stroke */
+border: 1px solid #C6C2DE;
+color: #25213B;
+border-radius: 6px;
+}
+
+.search{
+    width: 392px;
+height: 40px;
+
+/* Backgrounds/Stripe */
+background: #F4F2FF;
+border-radius: 0 6px 6px 0;
+outline: none;
+}
+
+.search_icon{
+    display: inline-block;
+    background: #F4F2FF;
+
+}
+
+.table_row_head{
+    font-weight: 600;
+font-size: 12px;
+line-height: 15px;
+
+letter-spacing: 0.05em;
+
+color: #6E6893;
+background: #F4F2FF;
+
+}
+
+.table_row_item{
+    border-bottom: 1px solid #D9D5EC;
+    font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+}
+
+.line{
+    width: 10px;
+    height: 2px;
+    background-color: #8B83BA;
+
+}
+
+.line.line1{
+    transform: translateX(1.5px) rotate(50deg);
+    border-radius: 50px 0 0 50px;
+}
+.line.line2{
+    transform: translateX(-1.5px) rotate(-50deg);
+    border-radius: 0 50px 50px 0;
+}
+
+.line.line1.open{
+    transform: translateX(1.5px) rotate(-50deg);
+    border-radius: 50px 0 0 50px;
+}
+.line.line2.open{
+    transform: translateX(-1.5px) rotate(50deg);
+    border-radius: 0 50px 50px 0;
+}
+
+.arrow{
+    border: 2px solid #8B83BA;
+}
+
+.email{
+    font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+
+/* identical to box height */
+letter-spacing: 0.05em;
+
+/* Fonts/Primary Variant */
+color: #6E6893;
+}
+
+.last_log{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    
+    /* identical to box height */
+    
+    /* Fonts/Primary Variant */
+    color: #6E6893;
+}
+
+.usd{
+    font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+
+letter-spacing: 0.05em;
+
+/* Fonts/Primary Variant */
+color: #6E6893;
+}
+
+.active_circle{
+    background: #4A4AFF;
+}
+
+.active_container{
+background: #E6E6F2;
+border-radius: 50px;
+}
+
+.paid_container{
+    background: #CDFFCD;
+    border-radius: 50px;
+    color: #007F00;
+}
+.unpaid_container{
+
+    background: #FFECCC;
+    border-radius: 50px;
+    color: #965E00;
+}
+.overdue_container{
+    background: #FFE0E0;
+    border-radius: 50px;
+    color: #D30000;
+}
+
+.active_color{
+    color: #4A4AFF;
+}
+
+.green_circle{
+    background: #007F00;
+}
+.red_circle{
+    background: #D30000;
+}
+.orange_circle{
+    background: #CE8500;
+}
+.container_head{
+    font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+
+/* Fonts/Primary Variant */
+color: #6E6893;
+}
+
+.totalAmount{
+    color: #6D5BD0;
+
+font-size: 16px;
+line-height: 17px;
+
+/* identical to box height */
+letter-spacing: 0.1em;
 }
